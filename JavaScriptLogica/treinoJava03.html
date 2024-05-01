@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valida CPF</title>
+</head>
+<body>
+    <main class="main-container">
+        <div class="form-box">
+            <div class="row">
+                <form >
+                   <div class="row-input-wrap">
+                    <label class="label">CPF</label>
+                    <input class="input" type="text" name="cpf" required="required" value="028.271.275-43">
+                </div>
+                <div class="row-input-wrap">
+                    <bu class="button">Send</bu>
+                </div>
+                </form>
+            
+        </div>
+    </div>
+    </main>
+    <script type="text/javascript" src="IValidate.js">
+        const input = document.querySelector("input[name=cpf]");
+        const button = document.querySelector("button");
+        
+        button.addEventListener("click",(e)=>){
+            if(!isCPF(input.value)){
+                alert("CPF Inválido");
+                return;
+            }
+            alert("CPF Válido");
+        }
+        function is CPF(cpf = 0){
+            console.log(cpf);
+            cpf = cpf.replace(/\.|-9/, "");
+            console.log(cpf);
+            return false;
+            if(!validaSegundoDigito(cpf))
+            return false;
+        return true;
+        }
+    </script>
+</body>
+</html>
